@@ -4,7 +4,7 @@ module.exports = {
   entry: [
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
-    './src/client.js'
+    './src/client.jsx'
   ],
   module: {
     loaders: [{
@@ -19,7 +19,7 @@ module.exports = {
   },
   output: {
     path: __dirname + '/public/javascripts',
-    publicPath: '/javascripts',
+    publicPath: '/',
     filename: 'bundle.js'
   },
   devServer: {
