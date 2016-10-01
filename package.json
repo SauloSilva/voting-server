@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "babel-node index.js",
-    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive",
+    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js \"test/**/*@(.js|.jsx)\" -r jsdom-global/register",
     "test:watch": "npm run test -- --watch"
   },
   "keywords": [],
@@ -19,6 +19,8 @@
     "babel-preset-react": "^6.16.0",
     "chai": "^3.5.0",
     "chai-immutable": "^1.6.0",
+    "jsdom": "^9.5.0",
+    "jsdom-global": "^2.1.0",
     "mocha": "^3.0.2",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.1"
