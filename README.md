@@ -15,3 +15,29 @@ The system will technically consist of two applications: There's a browser app w
 We're going to use Redux to organize the application code both on the client and on the server. For holding the state we'll use Immutable data structures.
 
 [**Reference**](http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html)
+
+## How start APPs
+
+- Install npms:
+
+```
+npm install
+```
+
+- Run server:
+
+```
+npm run start
+```
+
+- Run webpack:
+
+```
+webpack && webpack-dev-server
+```
+
+- Open `/dist/index.html` in your brownser
+
+- Run test:
+
+`npm run test`
