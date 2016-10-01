@@ -1,12 +1,17 @@
+var webpack = require('webpack');
+
 module.exports = {
   entry: [
+    'webpack-dev-server/client?http://localhost:8080',
+    'webpack/hot/only-dev-server',
     './src/client.js'
   ],
   module: {
     loaders: [{
       test: /\.jsx?$/,
       exclude: /node_modules/,
-      loader: 'babel'
+      loader: 'babel',
+      loaders: ['react-hot']
     }]
   },
   resolve: {
@@ -18,6 +23,10 @@ module.exports = {
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: './public/javascripts'
-  }
+    contentBase: './public/javascripts',
+    hot: true
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ]
 }
