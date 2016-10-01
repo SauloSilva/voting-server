@@ -130,5 +130,24 @@ describe('application logic', () => {
         entries: List.of('127 Hours', 'Trainspotting', '28 Days Later')
       }));
     });
+
+    it('marks winner when just one entries left', () => {
+      const state = Map({
+        vote: Map({
+          pair: List.of('Trainspotting', '28 Days Later'),
+          tally: Map({
+            'Trainspotting': 3,
+            '28 Days Later': 2
+          })
+        }),
+        entries: List()
+      });
+
+      const nextState = next(state);
+
+      expect(nextState).to.equal(Map({
+        winner: 'Trainspotting'
+      }));
+    });
   });
 })
