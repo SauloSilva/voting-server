@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import {
   renderIntoDocument,
   scryRenderedDOMComponentsWithTag,
-  simulate
+  Simulate
 } from 'react-addons-test-utils';
 
 import Voting from '../../src/components/Voting';
@@ -23,8 +23,8 @@ describe('Voting', () => {
   });
 
   it('invokes callback when a button is clicked', () => {
-    let votedWidth;
-    const vote = (entry) => votedWidth = entry;
+    let votedWith;
+    const vote = (entry) => votedWith = entry;
     const component = renderIntoDocument(
       <Voting pair={["Trainspotting", "28 Days Later"]} vote={vote} />
     );
