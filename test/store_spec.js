@@ -9,7 +9,7 @@ describe('store', () => {
     expect(store.getState()).to.equal(Map());
 
     store.dispatch({
-      type: 'SET_ENTRIES',
+      type: 'SET_ENTRIES::SERVER',
       entries: ['Trainspotting', '28 Days Later']
     });
 
